@@ -1,0 +1,2 @@
+# ignore node_modules, they are specific to platform and not needed on stage and prod
+node_modules

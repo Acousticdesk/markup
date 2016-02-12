@@ -1,0 +1,90 @@
+/* Mixins
+==================================*/
+
+@mixin opacity($opacity) {
+  -ms-filter: unquote("progid:DXImageTransform.Microsoft.Alpha(Opacity=#{round($opacity * 100)})");
+  filter: unquote("alpha(opacity=#{round($opacity * 100)})");
+  opacity: $opacity;
+}
+
+// BEM mixins
+@mixin e($el) {
+    &__#{$el} {
+        @content;
+    }
+}
+
+@mixin m($m) {
+    &--#{$m} {
+        @content;
+    }
+}
+
+/* Functions
+==============================================*/
+
+@function percs($target, $context) {
+    @return ($target / $context) * 100%;
+}
+
+/* Helper Classes
+==============================================*/
+
+.text {
+  &-center    { text-align: center; }
+  &-left      { text-align: left; }
+  &-right     { text-align: right; }
+  &-justify   { text-align: justify; }
+  &-uppercase { text-transform: uppercase; }
+  &-lowercase { text-transform: lowercase; }
+  // &-note      { font-style: italic; color: #8d949f; }
+}
+
+/* Media Queries
+===============================================*/
+
+@mixin mq($width) { // Use this to organize responsive design
+    @media only screen and (max-width: $width) {
+        @content;
+    }
+
+    @media
+    only screen and (-webkit-min-device-pixel-ratio: 2)      and (max-width: $width),
+    only screen and (   min--moz-device-pixel-ratio: 2)      and (max-width: $width),
+    only screen and (     -o-min-device-pixel-ratio: 2/1)    and (max-width: $width),
+    only screen and (        min-device-pixel-ratio: 2)      and (max-width: $width),
+    only screen and (                min-resolution: 192dpi) and (max-width: $width),
+    only screen and (                min-resolution: 2dppx)  and (max-width: $width) { 
+          @content;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

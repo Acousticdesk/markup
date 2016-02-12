@@ -1,0 +1,79 @@
+@import "bourbon/bourbon";
+@import "fonts";
+@import "variables";
+@import "helpers";
+
+
+* { 
+    outline: none;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+  background: #fff;
+  font-size: 16px;
+  line-height: 1.123;
+  color: $color-text;
+}
+
+body {
+    font-size: 62.5%; /* ->> 10px */
+    min-width: 320px;
+}
+
+html, body {
+  height: 100%;
+  min-height: 100%;
+}
+
+a
+a:link,
+a:visited {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+:root {
+  -webkit-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  -o-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import "media";
